@@ -1,0 +1,137 @@
+#dscheck-overlay [hidden] { display: none !important; }
+
+#dscheck-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 15, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 2147483647;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  animation: dscheck-fade 160ms ease-out;
+}
+
+@keyframes dscheck-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#dscheck-modal {
+  background: #ffffff;
+  color: #1a1a1a;
+  padding: 28px 32px;
+  border-radius: 16px;
+  max-width: 420px;
+  width: calc(100% - 64px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+#dscheck-modal .dscheck-title {
+  margin: 0 0 8px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+#dscheck-modal .dscheck-sub {
+  margin: 0 0 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+#dscheck-modal .dscheck-row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+#dscheck-modal .dscheck-btn {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 80ms ease, background 120ms ease;
+}
+
+#dscheck-modal .dscheck-btn:hover { transform: translateY(-1px); }
+#dscheck-modal .dscheck-btn:active { transform: translateY(0); }
+
+#dscheck-modal .dscheck-yes {
+  background: #ffe2e2;
+  color: #b32424;
+}
+#dscheck-modal .dscheck-yes:hover { background: #ffcccc; }
+
+#dscheck-modal .dscheck-no {
+  background: #e2f5e6;
+  color: #1f7a3a;
+}
+#dscheck-modal .dscheck-no:hover { background: #ccecd4; }
+
+#dscheck-modal .dscheck-next-label {
+  margin: 22px 0 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #888;
+}
+
+#dscheck-modal .dscheck-presets {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+#dscheck-modal .dscheck-preset {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid #d8d8d8;
+  background: #fafafa;
+  color: #333;
+  border-radius: 10px;
+  padding: 9px 0;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: background 120ms ease, border-color 120ms ease, color 120ms ease;
+}
+
+#dscheck-modal .dscheck-preset:hover {
+  background: #f0f0f0;
+  border-color: #c0c0c0;
+}
+
+#dscheck-modal .dscheck-preset.dscheck-active {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #fff;
+}
+
+#dscheck-modal .dscheck-custom {
+  flex: 1.4;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+#dscheck-modal .dscheck-custom::-webkit-outer-spin-button,
+#dscheck-modal .dscheck-custom::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#dscheck-modal .dscheck-custom:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+#dscheck-modal .dscheck-custom.dscheck-active::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}

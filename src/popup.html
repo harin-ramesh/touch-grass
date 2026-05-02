@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Touch Grass</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      width: 320px;
+      margin: 0;
+      padding: 16px;
+      background: #fafafa;
+      color: #1a1a1a;
+    }
+    h1 {
+      font-size: 16px;
+      margin: 0 0 12px;
+    }
+    label {
+      display: block;
+      font-size: 12px;
+      color: #555;
+      margin: 12px 0 4px;
+    }
+    textarea {
+      width: 100%;
+      box-sizing: border-box;
+      height: 120px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 13px;
+      padding: 8px;
+      border: 1px solid #d0d0d0;
+      border-radius: 8px;
+      resize: vertical;
+    }
+    input[type="number"] {
+      width: 80px;
+      padding: 6px 8px;
+      font-size: 13px;
+      border: 1px solid #d0d0d0;
+      border-radius: 8px;
+    }
+    button {
+      margin-top: 12px;
+      width: 100%;
+      padding: 9px;
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    button:hover { background: #1d4ed8; }
+    .status {
+      margin-top: 8px;
+      font-size: 12px;
+      color: #1f7a3a;
+      text-align: center;
+      min-height: 16px;
+    }
+    .hint {
+      font-size: 11px;
+      color: #777;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Touch Grass 🌱</h1>
+
+  <label for="sites">Exempt sites (one per line)</label>
+  <textarea id="sites" spellcheck="false" placeholder="github.com
+docs.google.com
+localhost"></textarea>
+  <div class="hint">Runs on every site except these. Matches the hostname and any subdomain.</div>
+
+  <label for="interval">Default interval (minutes)</label>
+  <input id="interval" type="number" min="1" max="240" />
+
+  <button id="save">Save</button>
+  <div class="status" id="status"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
