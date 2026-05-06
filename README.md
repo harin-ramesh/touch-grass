@@ -8,6 +8,8 @@ It runs on **every site by default** — you give it a list of sites to leave al
 
 ## Install (temporary, for development)
 
+Official Firefox Add-on page: https://addons.mozilla.org/en-US/firefox/addon/touch_grass/
+
 1. Open `about:debugging#/runtime/this-firefox` in Firefox.
 2. Click **Load Temporary Add-on…**
 3. Pick `src/manifest.json`.
@@ -34,4 +36,3 @@ After saving, **reload the tab** for the new settings to take effect on already-
 | Default interval | `5` minutes |
 
 ---
-
